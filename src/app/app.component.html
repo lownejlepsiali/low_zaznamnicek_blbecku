@@ -1,0 +1,122 @@
+<div class="app-layout">
+  <header class="header">
+    <span class="brand">LOW ZÁZNAMNÍČEK BLBEČKŮ</span>
+    <nav class="tabs">
+      <button [class.active]="activeTab === 'old'" (click)="setTab('old')">OLD_SCHOOL</button>
+      <button [class.active]="activeTab === 'pretosi'" (click)="setTab('pretosi')">pRETOŠI</button>
+    </nav>
+  </header>
+
+  <main class="content">
+    @if (activeTab === 'old') {
+      <div class="workspace">
+        <div class="status-bar">OS JE NEJLEPSI NA SVETE!!!!!!!!!!!</div>
+        <div class="data-grid">
+          <p>{{old_msg}}</p>
+          <div class="placeholder-line"></div>
+        </div>
+        <div class="data-grid">
+          <h4>MILÝ DIVÁCI PRVNÍ SI DOPREJEME NEUVERITELNE PRECIZNI PREZENTACI OS</h4>
+          <div class="placeholder-line"></div>
+        </div>
+        <div class="data-grid">
+          <p>sprostak jeden</p>
+          <img src="/assets/os/alf_kkt.png" alt="">
+        </div>
+        <div class="data-grid">
+          <p>jo bro byla nadilka</p>
+          <img src="/assets/os/gajdy_diky_asi.png" alt="">
+        </div>
+        <div class="data-grid">
+          <p>a jsem v hajzlu asi volam kralikovy dame krizovy meeting</p>
+          <img src="/assets/os/gajdy_mister.png" alt="">
+        </div>
+        <div class="data-grid">
+          <p>no nejaky jejich debilni popis</p>
+          <img src="/assets/os/gajdy_nejde_precist_sry.png" alt="">
+        </div>
+        <div class="data-grid">
+          <p>NO TO NE PRISNEJI ???? NO TO NEE</p>
+          <img src="/assets/os/gajdy_vyhrozuje.png" alt="">
+        </div>
+        <div class="data-grid">
+          <p>a co jsme ti jako udelali ??????</p>
+          <img src="/assets/os/nebrec.png" alt="">
+        </div>
+        <div class="data-grid">
+          <p>jj LOW brouččci </p>
+          <img src="/assets/os/nevyhrozuj_bro.png" alt="">
+        </div>
+        <div class="data-grid">
+          <p>bro chce demontaz sanice</p>
+          <img src="/assets/os/pako_vyhrozuje.png" alt="">
+        </div>
+        <div class="data-grid">
+          <p>ano "par" ale to u tebe rict nejde xd</p>
+          <img src="/assets/os/pultisek_jj_urco.png" alt="">
+        </div>
+        <div class="data-grid">
+          <h4>ALE MAME TU I NEJAKE VTIPECKY SAMOZREJME CHCEME SE HROU BAVIT</h4>
+          <div class="placeholder-line"></div>
+        </div>
+        
+        <div class="data-grid">
+          <p>chapes oni brani vse</p>
+          <img src="/assets/os/vtipy/vtip_2.png" alt="">
+        </div>
+        <div class="data-grid">
+          <p>chapete verte OS VERTE !!!!!!!!!</p>
+          <img src="/assets/os/vtipy/vtip_3.png" alt="">
+        </div>
+        <div class="data-grid">
+          <p>zahrajeme si hru kdo z OS to asi poslal</p>
+          <img src="/assets/os/vtipy/vtip_4.png" alt="">
+        </div>
+        <div class="data-grid">
+          <p>velmi kolorizovani akorat ze ne</p>
+          <img src="/assets/os/vtipy/vtip_5.png" alt="">
+        </div>
+        <div class="data-grid">
+          <p>píčo tohle uzralo jako vínko</p>
+          <img src="/assets/os/vtipy/vtip_6.png" alt="">
+        </div>
+        <div class="data-grid">
+          <p>jako jo hledali jsme</p>
+          <img src="/assets/os/vtipy/vtip_7.png" alt="">
+        </div>
+        <div class="data-grid">
+          <p>TOTO JE VELICE VELICE NEPRAVDIVY SCREN A FALESNE OBVINENI</p>
+          <img src="/assets/os/vtipy/vtip_8.png" alt="">
+        </div>
+        <div class="data-grid">
+          <p>jn</p>
+          <img src="/assets/os/vtipy/vtip_9.png" alt="">
+        </div>
+        <div class="data-grid">
+          <h4>TO JE FUK ALE POJDME SE KONECNE PODIVAT NA TY MODERNI NEPREKONATELNE UTOKY OS A OBRANY OS !!!!!!!</h4>
+          <div class="placeholder-line"></div>
+        </div>
+        @for (id of records; track id) {
+          <div class="data-grid">
+              <img 
+                [src]="'assets/os/zaznamy/t_' + id + '.png'" 
+                (error)="handleImageError($event)"
+                [alt]="'Záznam ' + id">
+          </div>
+        }
+        <div class="data-grid">
+          <h4>FASOVACKA LUXUSNI CO TAKZE ASI TAKTO K NEUVERITELNE MOCNE PALEBNE SILE OS DALSI ZAZNAMY SE CAS OD CASU DOHODI KDYBY BYLA STIZNOST TAK +420 284 016 111 V PRACOVNI DOBE </h4>
+          <div class="placeholder-line"></div>
+        </div>
+      </div>
+    } @else {
+      <div class="workspace">
+        <div class="status-bar">pRETOŠI NAS ZNICI!!!!!!!!!!!!!!</div>
+        <div class="data-grid">
+          <p>{{pretosi_msg}}</p>
+          <div class="placeholder-line"></div>
+        </div>
+      </div>
+    }
+  </main>
+</div>
